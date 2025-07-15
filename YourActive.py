@@ -3,7 +3,6 @@ import subprocess
 import customtkinter
 import uptime
 import pywinstyles
-import time
 
 pc_work_time = uptime.uptime()
 #------------------------------------------------------------------------------------------------------
