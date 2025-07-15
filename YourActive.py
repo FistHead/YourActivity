@@ -30,7 +30,6 @@ class TimeWindow(customtkinter.CTkToplevel):
         super().__init__()
         self.show_time_above = False
         self.geometry('100x50+10+10')
-        self.title("YourActivity")
         self.overrideredirect(True)
         self.configure(background='None')
         self.wm_attributes("-topmost", True)
@@ -49,7 +48,7 @@ class App(customtkinter.CTk):
         super().__init__()
         self.geometry('600x400')
         self.title("YourActivity")
-        self.iconbitmap('C:/Users/banan/Documents/YourActivity/YourActive.ico')
+        self.iconbitmap('D:\YourActivity\YourActive.ico')
 
         self.grid_rowconfigure(0, weight=1)  # configure grid system
         self.grid_columnconfigure(0, weight=1)
