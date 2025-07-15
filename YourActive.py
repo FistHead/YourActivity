@@ -51,7 +51,7 @@ class App(customtkinter.CTk):
         super().__init__()
         self.geometry('600x400')
         self.title("YourActivity")
-        self.iconbitmap('D:\Pyprojects\PythonProject\YourActive.ico')
+        self.iconbitmap('C:/Users/banan/Documents/YourActivity/YourActive.ico')
 
         self.grid_rowconfigure(0, weight=1)  # configure grid system
         self.grid_columnconfigure(0, weight=1)
