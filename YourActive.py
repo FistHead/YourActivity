@@ -29,7 +29,7 @@ class TimeWindow(customtkinter.CTkToplevel):
     def __init__(self):
         super().__init__()
         self.show_time_above = False
-        self.geometry('200x50+0+0')
+        self.geometry('100x50+10+10')
         self.title("YourActivity")
         self.overrideredirect(True)
         self.anchor('n')
