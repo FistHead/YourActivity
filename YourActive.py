@@ -29,13 +29,11 @@ class TimeWindow(customtkinter.CTkToplevel):
     def __init__(self):
         super().__init__()
         self.show_time_above = False
-        self.geometry('200x50+0+0')
+        self.geometry('100x50+10+10')
         self.title("YourActivity")
         self.overrideredirect(True)
-        self.anchor('n')
         self.configure(background='None')
         self.wm_attributes("-topmost", True)
-        self.wm_attributes()
 
         font = customtkinter.CTkFont(family="Minecart LCD", size=20)
 
@@ -51,7 +49,7 @@ class App(customtkinter.CTk):
         super().__init__()
         self.geometry('600x400')
         self.title("YourActivity")
-        self.iconbitmap('D:\Pyprojects\PythonProject\YourActive.ico')
+        self.iconbitmap('C:/Users/banan/Documents/YourActivity/YourActive.ico')
 
         self.grid_rowconfigure(0, weight=1)  # configure grid system
         self.grid_columnconfigure(0, weight=1)
@@ -78,7 +76,6 @@ class App(customtkinter.CTk):
         pc_work_time = uptime.uptime()
         now = datetime.datetime.now()
         current_time = now.strftime("%H:%M")
-        print(self.time_in_pc)
 
         hours, remainder = divmod(pc_work_time, 3600)
         minutes, seconds = divmod(remainder, 60)
@@ -94,7 +91,7 @@ class App(customtkinter.CTk):
         if self.time_window and self.time_window.winfo_exists():
             self.time_window.pc_current_time_text.configure(text=f"{self.time_in_pc}")
 
-        self.after(100, self.update)
+        self.after(500, self.update)
 
     def toggle_time_window(self):
         if self.checkbox.get():
